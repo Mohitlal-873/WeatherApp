@@ -4,10 +4,155 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Mausam.com</title>
+   
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <h1>Hello, world!</h1>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Mausam.com</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link">User Guide</a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="search_area">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+         <h2  class="display-6 text-center mb-4">Weather of <span class="city">Pune</span></h2>
+    <div class="conatainer">
+      <main>
+        <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+          <div class="col">
+            <div class="card mb-4 rounded-3 shadow-sm">
+              <div class="card-header py-3">
+                <h4 class="my-0 fw-normal">Condition</h4>
+              </div>
+              <div class="card-body">
+                <h2 class="card-title pricing-card-title"><small class="text-body-secondary fw-light"><span id="condition"></span></small></h2>
+                <h4 class="card-title pricing-card-title"><span id="temp">00</span><small class="text-body-secondary fw-light">℃</small></h4>
+                <ul class="list-unstyled mt-3 mb-4">
+                  <li>Feelslike : <span id="feel">00</span><span>℃</span></li>
+                  <li>Humidity : <span id="Humidity">00</span><span>%</span></li>
+                  <li>Pressure : <span id="Pressure">0000</span><span> MB</span></li>
+                  <li></li>
+                </ul>
+                <!-- <button type="button" class="w-100 btn btn-lg btn-outline-primary">Sign up for free</button> -->
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card mb-4 rounded-3 shadow-sm">
+              <div class="card-header py-3">
+                <h4 class="my-0 fw-normal">About <span class="a_city">______</span></h4>
+              </div>
+              <div class="card-body">
+                <h1 class="card-title pricing-card-title">Country : <small class="text-body-secondary fw-light"><span id="Country">__________</span></small></h1>
+                <ul class="list-unstyled mt-3 mb-4">
+                  <li>Date : <span id="date"></span></li>
+                  <li>Time : <span id="time"></span></li>
+                  <li>Region : <span id="region"></span></li>
+                  
+                </ul>
+                <!-- <button type="button" class="w-100 btn btn-lg btn-primary">Get started</button> -->
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card mb-4 rounded-3 shadow-sm">
+              <div class="card-header py-3 ">
+                <h4 class="my-0 fw-normal">Others</h4>
+              </div>
+              <div class="card-body">
+                <ul class="list-unstyled mt-3 mb-4">
+                  <li>Wind speed : <span id="wspeed"></span>Km/h</li>
+                  <li>Wind Direction : <span id="wdirection"></span></li>
+                  <li>latitude : <span id="lat"></span></li>
+                  <li>longitude : <span id="lon"></span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+    
+        <h2 class="display-6 text-center mb-4">Weather of other common places</h2>
+    
+        <div class="table-responsive">
+          <table class="table text-center">
+            <thead>
+              <tr>
+                <th style="width:5%"></th>
+                <th>Temperature</th>
+                <th>Feelslike</th>
+                <th>Humidity</th>
+                <th>Pressure</th>
+                <th>Wind Speed</th>
+                <th>Condition</th> 
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <th scope="row" class="text-start">Mumbai</th>
+                <td id="m_temp">1</td>
+                <td id="m_feel">2</td>
+                <td id="m_hum">3</td>
+                <td id="m_pre">4</td>
+                <td id="m_ws">5</td>
+                <td id="m_wd">6</td>
+                
+              </tr>
+              <tr>
+                <th scope="row" class="text-start">Kolkata</th>
+                <td id="k_temp">1</td>
+                <td id="k_feel">2</td>
+                <td id="k_hum">3</td>
+                <td id="k_pre">4</td>
+                <td id="k_ws">5</td>
+                <td id="k_wd">6</td>
+     
+              </tr>      
+              <tr>
+                <th scope="row" class="text-start">Delhi</th>
+                <td id="d_temp">1</td>
+                <td id="d_feel">2</td>
+                <td id="d_hum">3</td>
+                <td id="d_pre">4</td>
+                <td id="d_ws">5</td>
+                <td id="d_wd">6</td>
+              </tr>
+              <tr>
+                <th scope="row" class="text-start">chennai</th>
+                <td id="c_temp">1</td>
+                <td id="c_feel">2</td>
+                <td id="c_hum">3</td>
+                <td id="c_pre">4</td>
+                <td id="c_ws">5</td>
+                <td id="c_wd">6</td>
+              </tr>
+            </tbody>  
+          </table>
+        </div>
+      </main>
+    </div>
   </body>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+  <script src="app.js"></script>
 </html>
