@@ -1,4 +1,3 @@
- //http://api.weatherapi.com/v1/current.json?key=a2a3c11ddc1e4a7c95b190919252801&q=mumbai&aqi=
 
  const city=document.querySelector(".city");
  const about_city=document.querySelector(".a_city")
