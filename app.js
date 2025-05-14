@@ -27,7 +27,7 @@
 }
 
 const getData=async(targetplace)=>{
-	let url=`http://api.weatherapi.com/v1/current.json?key=a2a3c11ddc1e4a7c95b190919252801&q=${targetplace}&aqi=`
+	let url=`http://api.weatherapi.com/v1/current.json?key=(your key)&q=${targetplace}&aqi=`
 
 	const response= await fetch(url);
 	const data = await response.json();
@@ -109,7 +109,7 @@ const c_cond=document.querySelector("#c_wd")
 
 // for Mumbai weather --->
 const getData2=async(constantPlace)=>{
-	let url=`http://api.weatherapi.com/v1/current.json?key=a2a3c11ddc1e4a7c95b190919252801&q=${constantPlace}&aqi=`
+	let url=`http://api.weatherapi.com/v1/current.json?key=(your key)&q=${targetplace}&aqi=`
 
 	const response= await fetch(url);
 	const data = await response.json();
@@ -142,7 +142,7 @@ getData2(target2);
 
 // for Kolkata weather ----->
 const getData3=async(constantPlace)=>{
-	let url=`http://api.weatherapi.com/v1/current.json?key=a2a3c11ddc1e4a7c95b190919252801&q=${constantPlace}&aqi=`
+	let url=`http://api.weatherapi.com/v1/current.json?key=(your key)&q=${targetplace}&aqi=`
 
 	const response= await fetch(url);
 	const data = await response.json();
@@ -175,7 +175,7 @@ getData3(target3);
 
 // for Delhi weather --->
 const getData4=async(constantPlace)=>{
-	let url=`http://api.weatherapi.com/v1/current.json?key=a2a3c11ddc1e4a7c95b190919252801&q=${constantPlace}&aqi=`
+	let url=`http://api.weatherapi.com/v1/current.json?key=(your key)&q=${targetplace}&aqi=`
 
 	const response= await fetch(url);
 	const data = await response.json();
@@ -208,7 +208,7 @@ getData4(target4);
 
 // for chennai weather --->
 const getData5=async(constantPlace)=>{
-	let url=`http://api.weatherapi.com/v1/current.json?key=a2a3c11ddc1e4a7c95b190919252801&q=${constantPlace}&aqi=`
+	let url=`http://api.weatherapi.com/v1/current.json?key=(your key)&q=${targetplace}&aqi=`
 
 	const response= await fetch(url);
 	const data = await response.json();
